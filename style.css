@@ -8,7 +8,13 @@
   }
 
   /* shared style */
-
+main{
+    max-width: 1440px;
+    margin: 0 auto;
+}
+main > section{
+    margin-top: 130px;
+}
   .display-flex{
     display: flex;
   }
@@ -60,7 +66,8 @@
   }
   .nav-link{
     text-decoration: none;
-    font-weight: 500;
+    font-size: 1.2rem;
+    font-weight: 700;
 
   }
 
@@ -85,16 +92,138 @@
 
   .banner-image{
     width: 100%;
+    margin-bottom: 30px;
   }
   
+/* teams */
+.team-img-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+.teams{
+    align-items: center;
+}
+
+.features{
+    margin-left: 80px;
+    max-width: 530px;
+
+}
+.features h3{
+    font-size: 2.8rem;
+    font-size: 700;
+}
+#quick-list{
+    color: #727272;
+    font-weight: 500;
+}
+.features p{
+    color: #727272;
+    margin-bottom: 30px;
+}
+
+/* facts */
+.fact-section h3{
+    font-size: 2.8rem;
+    font-weight: bold;
+    color: #131313;
+    margin-bottom: 10px;
+    text-align: center;
+}
+.fact-section p{
+    text-align: center;
+}
+.facts-container{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 120px;
+   
+}
+.fact{
+    border: 1px solid #FF900E;
+    padding: 50px;
+    text-align: center;
+    border-radius: 8px;
+    margin-top: 30px;
+}
+.fact-number{
+    font-size: 2.8rem;
+    margin: 0 auto;
+}
+.fact-name{
+    font-size: 1.2rem;
+    color: #9c9a9a;
+    margin: 0 auto;
+}
+
+/* sponsor style */
+.sponsor-info{
+    margin-bottom: 30px;
+}
+.sponsor-title{
+    font-size: 2.8rem;
+    font-weight: bold;
+    color: #131313;
+    margin-bottom: 10px;
+    text-align: center;
+}
+.our-sponsors p{
+    text-align: center;
+}
+.sponsor-companies{
+
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);  
+}
+.sponsor-companies img{
+    filter: grayscale(100%);
+}
+
+
+footer{ 
+    margin-top: 100px;
+}
 
 
 
 
 
 
+
+/* small size */
   @media screen and (max-width: 576px) {
-    .navbar, .nav-links{
+    .navbar, .nav-links, .teams{
         flex-direction: column;
     }
+    .team-img-container{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .features{
+        margin-left: 40px;
+    }
+    .facts-container{
+        grid-template-columns: repeat(1, 1fr);
+        margin-left: 15px;
+        margin-right: 15px;
+        gap: 20px;
+    }
   }
+
+/* medium */
+
+@media screen and (min-width: 577px) and (max-width: 992px) {
+    .teams{
+        flex-direction: column;
+    }
+    .features{
+        margin: 50px auto;
+    }
+    .facts-container{
+        grid-template-columns: repeat(2, 1fr);
+        margin-left: 25px;
+        margin-right: 25px;
+        gap: 25px;
+    }
+    
+}
